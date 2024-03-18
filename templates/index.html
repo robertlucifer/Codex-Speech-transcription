@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Speech by Robert</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='styles/index.css')}}"
+    />
   </head>
   <body>
     <div id="speechContainer"></div>
@@ -13,5 +17,11 @@
       <br />
       <input type="submit" value="Convert" />
     </form>
+    {% if transcript !=""%}
+    <div id="output">
+      <h2>Trnasciprt</h2>
+      <p>{{transcript}}</p>
+      {% endif %}
+    </div>
   </body>
 </html>
